@@ -1,0 +1,149 @@
+:root {
+    --bg: #0f1114;
+    --card: #16181c;
+    --text: #e8e9eb;
+    --muted: #b7bac0;
+    --border: #2a2e35;
+    --primary: #1666b3;
+    --danger: #e24c4c;
+    --radius: 12px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, .2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, Arial;
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 20% -10%, #1a1e24, #0f1114);
+}
+
+.container {
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.link {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+.stack>* {
+    margin-bottom: 16px;
+}
+
+.form .field {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.form input {
+    border: 1px solid var(--border);
+    background: #0f1114;
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form input:focus {
+    border-color: var(--primary);
+}
+
+.btn {
+    background: #243041;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.btn.primary {
+    background: var(--primary);
+    border-color: transparent;
+    color: white;
+}
+
+.btn.ghost {
+    background: transparent;
+}
+
+.btn.danger {
+    background: var(--danger);
+    color: #0d0f11;
+    border-color: transparent;
+}
+
+.alert.error {
+    background: #3b1f28;
+    border: 1px solid #8a2b3a;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.list .row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.list .row:first-child {
+    border-top: 0;
+}
+
+.col.grow {
+    flex: 1;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.meta {
+    display: flex;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.muted {
+    color: var(--muted);
+}
