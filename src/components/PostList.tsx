@@ -35,11 +35,14 @@ export default function PostList() {
     await load();
   }
 
-  async function updatePost(id: string, payload: { date: string; title: string; readTime: string }) {
-    await PostsAPI.update(id, { id, ...payload });
-    setEditing(null);
-    await load();
-  }
+  async function updatePost(
+  id: string,
+  payload: { date: string; title: string; readTime: string }
+) {
+  await PostsAPI.update(id, payload); // <-- removido { id, ...payload }
+  setEditing(null);
+  await load();
+}
 
   async function removePost(id: string) {
     if (!confirm('Excluir este post?')) return;

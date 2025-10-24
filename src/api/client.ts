@@ -1,4 +1,4 @@
-const API = import.meta.env.VITE_API_URL ?? 'http://localhost:3000';
+const API = "https://back.standclass.com.br";
 
 export async function http<T>(
   path: string,
